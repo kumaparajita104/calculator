@@ -1,10 +1,9 @@
 package calculator;
 
 import java.util.*;
+public class Calculator {
 
-public class Calculator{
-	public static void main(String args[])
-	{
+	public static void main(String[] args){
 		System.out.println("CALCULATOR");
 		
 		int choice,flag=0;
@@ -35,18 +34,17 @@ public class Calculator{
 				switch(choice)
 				{
 					case 1:
-						System.out.println(operand1+operand2);
+						System.out.println(add(operand1,operand2));
 						break;
 					case 2:
-						System.out.println(operand1-operand2);
+						System.out.println (subtract(operand1,operand2));
 						break;
 					case 3:
-						System.out.println(operand1*operand2);
+						System.out.println (multiply(operand1,operand2));
 						break;
 					case 4:
-						if(operand2==0)
-							System.out.println("Please enter non zero number");
-						System.out.println(operand1/operand2);
+						
+						System.out.println(divide(operand1,operand2));
 						break;
 					default:
 						System.out.println("Exiting program");
@@ -56,7 +54,29 @@ public class Calculator{
 			System.out.println("");
 		}while(flag==0);
 	}
+
+	public static double add(double a, double b) {
+		return a + b;
 	}
+	
+	public static double subtract(double a, double b) {
+		return a - b;
+	}
+
+	public static double multiply(double a, double b) {
+		return a * b;
+	}
+
+	public static double divide(double a, double b) {
+		double result;
+		if (b == 0) {
+			throw new IllegalArgumentException("Divisor cannot divide by zero");
+		} else {
+			result = Double.valueOf(a)/Double.valueOf(b);
+		}
+		return result;
+	}
+}
 					
 				
 

@@ -18,14 +18,8 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+  
+
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -81,7 +75,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>Calculator.Calculator</mainClass>
+                                    <mainClass>calculator.Calculator</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
@@ -94,4 +88,14 @@
       </plugins>
     </pluginManagement>
   </build>
+  <dependencies>
+
+   
+	   <dependency>
+   			<groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+   		</dependency>
+</dependencies>
 </project>
